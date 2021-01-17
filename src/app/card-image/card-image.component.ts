@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DECKS } from '../decks';
 import { Cards, Card } from 'scryfall-sdk';
+import { LocalStorageService } from '../local-storage.service';
 
 @Component({
   selector: 'app-card-image',
@@ -9,13 +10,19 @@ import { Cards, Card } from 'scryfall-sdk';
 })
 export class CardImageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private localStorageService: LocalStorageService) { }
 
   decks = DECKS;
   cardImage;
+  set;
+
+  persist(key: string, value: any) {
+    this.localStorageService.set(key, value);
+  }
 
   ngOnInit(): void {
     this.getCardImage();
+    this.set = this.localStorageService.get('set');
   }
 
   getCardImage(): void {

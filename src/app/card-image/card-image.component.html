@@ -1,5 +1,8 @@
 <div>
-    Set: <input #searchBox id="search-box" value="Kaldheim">
+    Set: <input id="search-box" 
+        [(ngModel)]="set" 
+        placeholder="Set Name"
+        (input)="persist('set', set)">
 </div>
 <div id="wrapper">
     <div id="card">
