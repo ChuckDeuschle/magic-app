@@ -1,4 +1,19 @@
-<img src="../../assets/khm-395-island.jpg">
+<div>
+    Set: <input #searchBox id="search-box" value="Kaldheim">
+</div>
+<div id="wrapper">
+    <div id="card">
+        <img src="{{cardImage}}">
+        Img: {{cardImage}}
+    </div>
+    <div id="decks">
+        <ul>
+            <li *ngFor="let deck of decks">
+                {{deck.name}}
+            </li>
+        </ul>
+    </div>
+</div>
 <nav>
     <a>Next</a>
     <a>Previous</a>

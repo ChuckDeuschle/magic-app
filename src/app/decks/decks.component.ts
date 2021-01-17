@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DECKS } from '../decks';
+import { LocalStorageService } from '../local-storage.service';
 
 @Component({
   selector: 'app-decks',
@@ -8,7 +9,7 @@ import { DECKS } from '../decks';
 })
 export class DecksComponent implements OnInit {
 
-  constructor() { }
+  constructor(private localStorageService: LocalStorageService) { }
 
   decks = DECKS;
 

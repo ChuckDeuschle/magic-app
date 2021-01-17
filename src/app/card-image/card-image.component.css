@@ -1,0 +1,33 @@
+a {
+    padding: 5px 10px;
+    text-decoration: none;
+    margin-top: 10px;
+    display: inline-block;
+    background-color: rgb(209, 209, 209);
+    border-radius: 4px;
+  }
+a:visited, a:link {
+    color: #334953;
+  }
+a:hover {
+    color: #039be5;
+    background-color: #cfd8dc;
+  }
+a.active {
+    color: #039be5;
+  }
+#wrapper {
+    width: 692px;
+    /*border: 1px solid black;*/
+    overflow: hidden; /* add this to contain floated children */
+}
+#card {
+    width: 488px;
+    float:left; /* add this */
+    /*border: 1px solid red;*/
+}
+#decks {
+    width: 200px;
+    /*border: 1px solid green;*/
+    float: left; /* add this */
+}

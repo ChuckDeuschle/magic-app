@@ -1,6 +1,9 @@
 <h2>Decks:</h2>
 <ul>
     <li *ngFor="let deck of decks">
-        <span>{{deck.id}}</span> {{deck.name}}
+        <div>
+            <span>ID: {{deck.id}}</span> Name: {{deck.name}}
+        </div>
+        <textarea>{{deck.deckList}}</textarea>
     </li>
 </ul>
