@@ -2,7 +2,8 @@
     Set: <input id="search-box" 
         [(ngModel)]="set" 
         placeholder="Set Name"
-        (input)="persist('set', set)">
+        (input)="persist('set', set)"
+        (change)="onChange()">
 </div>
 <div id="wrapper">
     <div id="card">
@@ -18,6 +19,6 @@
     </div>
 </div>
 <nav>
-    <a>Next</a>
-    <a>Previous</a>
+    <a [routerLink]="['/card-image', this.set, this.id+1]">Next</a>
+    <a [routerLink]="['/card-image', this.set, this.id-1]">Previous</a>
 </nav>
