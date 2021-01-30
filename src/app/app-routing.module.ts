@@ -5,8 +5,10 @@ import { DecksComponent } from './decks/decks.component';
 
 
 const routes: Routes = [
+  { path: '', redirectTo: '/card-image', pathMatch: 'full' },
   { path : 'card-image', component: CardImageComponent},
-  { path : 'decks', component : DecksComponent }
+  { path : 'decks', component : DecksComponent },
+  { path : 'card-image/:set/:id', component: CardImageComponent },
 ];
 
 @NgModule({
